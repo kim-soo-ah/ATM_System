@@ -32,6 +32,20 @@ public class MainSceneUI : MonoBehaviour
 
         Refresh();
     }
+    
+    //출금기능 만들기
+    public void Withdraw(int value)
+    {
+        if(value > DataManager.instance.data.banlance)
+        {
+            Debug.Log("출금할 잔액이 부족합니다");
+            return;
+        }
+        DataManager.instance.data.cash += value;
+        DataManager.instance.data.banlance -= value;
+
+        Refresh();
+    }
 
     public void Refresh()
     {
