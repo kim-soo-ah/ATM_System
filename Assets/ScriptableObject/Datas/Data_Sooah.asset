@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dceed0e642b39424389341625afa025f, type: 3}
   m_Name: Data_Sooah
   m_EditorClassIdentifier: 
-  banlance: 50000
-  cash: 100000
+  banlance: 60000
+  cash: 90000

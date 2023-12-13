@@ -10,13 +10,32 @@ public class MainSceneUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cash.text = DataManager.instance.data.cash.ToString();
-        banlance.text = DataManager.instance.data.banlance.ToString();
+        Refresh();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    // 입금기능 만들기
+    public void Deposit(int value)
+    {
+        if (value > DataManager.instance.data.cash)
+        {
+            Debug.Log("입금할 잔액이 부족합니다");
+            return;
+        }
+        DataManager.instance.data.cash -= value;
+        DataManager.instance.data.banlance += value;
+
+        Refresh();
+    }
+
+    public void Refresh()
+    {
+        cash.text = DataManager.instance.data.cash.ToString();
+        banlance.text = DataManager.instance.data.banlance.ToString();
     }
 }

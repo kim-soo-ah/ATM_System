@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "love/Data", order = 1)]
 public class Data : ScriptableObject
 {
-    public float banlance;
-    public float cash;
+    public int banlance;
+    public int cash;
 
 }
